@@ -1,3 +1,7 @@
+#This script builds a list of all absolute path names of
+#regular files in the current directory
+
+import os, sys
 import os, sys
 from stat import *
 
@@ -5,6 +9,11 @@ from stat import *
 mylistoffiles = []
 def getfilesinalist(currdir):
     """Returns a list of all filenames, recursively, starting from currdir."""
+    #check if the currdir refers to a valid path
+    rettrue = os.path.exists(currdir)
+    if not rettrue:
+        print '%s is not a valid search path' %currdir
+        return
     for f in os.listdir(currdir):
         #portable way for using absolute pathname is to use join
         pathname = os.path.join(currdir, f)
@@ -31,8 +40,10 @@ if __name__ == '__main__':
    #if the directory is empty, print a message
    #this case can come only if, this script gets some 
    #argument other than the current working directory.
+   #Note the truth value testing
    if not allfiles:
         print "Seems the directory is empty"
         os._exit(0)
    for files in allfiles:
         print files
+
