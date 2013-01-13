@@ -1,0 +1,4 @@
+mystring fetch_compile_path="E:\\Fetch_compile\\";
+mystring prev_log_path="E:\\ prev_log \\";
+mystring UT_path="E:\\ UT_path \\";
+mystring Config_File="E:\\ Config \\"; 

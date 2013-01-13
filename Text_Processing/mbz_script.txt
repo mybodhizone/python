@@ -1,0 +1,5 @@
+mystring fetch_compile_path="D:\\AUTOMATION\\Fetch_Compile\\";
+mystring prev_log_path="D:\\AUTOMATION\\Old_Logs\\";
+mystring UT_path="D:\\AUTOMATION\\UT\\";
+mystring Config_File="D:\\AUTOMATION\\config.txt";
+ 

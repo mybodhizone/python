@@ -1,0 +1,29 @@
+
+					1)Problem Statement
+Two files are there i)mbz_config.txt and ii)mbz_script.txt. The contents of both the files are as  follows, 
+mbz_config.txt
+fetch_compile_path= "E:\\Fetch_compile\\";
+prev_log_path= "E:\\ prev_log \\";
+UT_path= "E:\\ UT_path \\";
+Config_File= "E:\\ Config \\";
+
+mbz_script.txt
+
+mystring fetch_compile_path="D:\\AUTOMATION\\Fetch_Compile\\";
+mystring prev_log_path="D:\\AUTOMATION\\Old_Logs\\";
+mystring UT_path="D:\\AUTOMATION\\UT\\";
+mystring Config_File="D:\\AUTOMATION\\config.txt";
+ 
+**************************************************************************************
+The paths of the  file mbz_script.txt are to be replaced  with paths of mbz_config.txt. There can be other lines in the file  mbz_script.txt. The replacement needs to be done in those lines, which starts with "mystring".
+So a new file  mbz_new_script.txt should be generated, with the contents as follows, 
+ 
+mbz_new_script.txt
+
+mystring fetch_compile_path= "E:\\Fetch_compile\\";
+mystring prev_log_path= "E:\\ prev_log \\";
+mystring UT_path= "E:\\ UT_path \\";
+mystring  Config_File= "E:\\ Config \\";
+ 
+*********************************************************************************
+
