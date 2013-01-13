@@ -46,7 +46,9 @@ def makeregex(mylistofextnames ):
     """Returns a regular expression object for matching extension names"""
 
     #Note the use of map, re.escape,join
-    myregexstring = '|'.join(map(appenddollar, map(re.escape, mylistofextnames)))
+    #myregexstring = '|'.join(map(appenddollar, map(re.escape, mylistofextnames)))
+    #ver - 0.2 - used lambda, instead of the shortfunction
+    myregexstring = '|'.join(map(lambda x: x + '$' , map(re.escape, mylistofextnames)))
     #print myregexstring
 
     #getting regexobject 
@@ -54,8 +56,8 @@ def makeregex(mylistofextnames ):
 
     return myregexobj
 
-def appenddollar(mystr):
-    return mystr + '$'
+#def appenddollar(mystr):
+#    return mystr + '$'
 
 if __name__ == '__main__':
    
