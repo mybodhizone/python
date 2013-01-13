@@ -59,7 +59,7 @@ def compare_lines(lines_from_input_file, lines_from_output_file):
         my_new_list_of_lines = [] #This is the list of lines, that will be finally returned
         #Split lines from config file into two parts (with = as the delimiter)
         ip_broken_line = ip_line.split('=')
-        for op_line in lines_from_output_file: #lines from hit script
+        for op_line in lines_from_output_file: #lines from script file
         #for those lines, which have the word string from beginning
             searchstat = myregexobj.search(op_line)
             #Successful means I have got a declaration line
@@ -69,7 +69,7 @@ def compare_lines(lines_from_input_file, lines_from_output_file):
                 if (ret > -1): #When not found find method returns -1
                     #Here Need to make the new ouptput line
                     op_broken_line = op_line.split('=')
-                    #The 2nd part of the line in the hit script is discarded.
+                    #The 2nd part of the line in the script is discarded.
                     #modified_line = op_broken_line[0] + '=' + ip_broken_line[1]
                     #Removing spaces from left hand side of the string
                     modified_line = op_broken_line[0] + '=' + ip_broken_line[1].lstrip()
@@ -81,7 +81,7 @@ def compare_lines(lines_from_input_file, lines_from_output_file):
             else:
                 my_new_list_of_lines.append(op_line)
         #Now need to update the list of lines in the output file's list
-        del lines_from_output_file #Clear the earlier list of lines
+        del lines_from_output_file #clear the earlier list of lines
         lines_from_output_file = list(my_new_list_of_lines) #deep copy a list
     return my_new_list_of_lines
                     
